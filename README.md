@@ -6,7 +6,7 @@ Ivan Jacob Agaloos Pesigan
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/jeksterslab-r/strRegression/workflows/R-CMD-check/badge.svg)](https://github.com/jeksterslab-r/strRegression/actions)
+[![R-CMD-check](https://github.com/jeksterslab/strRegression/workflows/R-CMD-check/badge.svg)](https://github.com/jeksterslab/strRegression/actions)
 <!-- badges: end -->
 
 ## Description
@@ -17,15 +17,15 @@ of the linear regression model.
 ## Installation
 
 You can install the released version of `strRegression` from
-[GitHub](https://github.com/jeksterslab-r/strRegression) with:
+[GitHub](https://github.com/jeksterslab/strRegression) with:
 
 ``` r
 install.packages("remotes")
-remotes::install_github("jeksterslab-r/strRegression")
+remotes::install_github("jeksterslab/strRegression")
 ```
 
 ## More Information
 
 See [GitHub
-Pages](https://jeksterslab-r.github.io/strRegression/index.html) for
+Pages](https://jeksterslab.github.io/strRegression/index.html) for
 package documentation.

@@ -1,4 +1,5 @@
 ## ---- test-strRegression-beta_of_sigmacap
+tol_i <- 0.01
 n_i <- 100000
 k_i <- sample(
   2:10,
@@ -42,13 +43,17 @@ result_i <- unname(
   )
 )
 testthat::test_that("strRegression-beta_of_sigmacap", {
-  testthat::expect_equal(
-    answer_i,
-    result_i
+  testthat::expect_true(
+    all(
+      abs(
+        answer_i - result_i
+      ) <= tol_i
+    )
   )
 })
 # clean environment
 rm(
+  tol_i,
   n_i,
   k_i,
   mu_i,
