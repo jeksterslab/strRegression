@@ -1,0 +1,21 @@
+---
+title: "strRegression: Structure of Regression"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{strRegression: Structure of Regression}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Description
+
+A collection of functions
+related to the mean and covariance structures
+of the linear regression model.

@@ -1,0 +1,31 @@
+---
+title: "strRegression: Session"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{strRegression: Session}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(strRegression)
+```
+
+# Session
+
+```{r}
+sessionInfo()
+```
+
+# Packages
+
+```{r}
+unname(installed.packages()[, 1])
+```

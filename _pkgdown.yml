@@ -1,0 +1,16 @@
+destination: docs
+url: https://github.com/jeksterslab-r/strRegression/
+
+reference:
+- title: Package
+  contents:
+  - has_keyword("package")
+- title: Structure of Regression Functions
+  contents:
+  - has_concept("Structure of Regression Functions")
+- title: Multivariate Normal Distribution Functions
+  contents:
+  - has_concept("Multivariate Normal Distribution Functions")
+- title: Linear Algebra Functions
+  contents:
+  - has_concept("Linear Algebra Functions")

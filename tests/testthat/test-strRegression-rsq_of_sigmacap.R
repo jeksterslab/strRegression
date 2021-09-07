@@ -1,0 +1,60 @@
+## ---- test-strRegression-rsq_of_sigmacap
+n_i <- 100000
+k_i <- sample(
+  2:10,
+  size = 1
+)
+mu_i <- rep(
+  x = 0,
+  times = k_i
+)
+sigmacap_i <- matrix(
+  runif(
+    n = 1,
+    min = 0,
+    max = 1
+  ),
+  nrow = k_i,
+  ncol = k_i
+)
+diag(sigmacap_i) <- 1
+x_i <- rmvn_chol(
+  n = n_i,
+  mu = mu_i,
+  sigmacap = sigmacap_i,
+  varnames = c(
+    "y",
+    paste0("x", seq_len(k_i - 1))
+  ),
+  data_frame = TRUE
+)
+obj_i <- lm(y ~ ., data = as.data.frame(x_i))
+answer_i <- unname(
+  round(
+    summary.lm(obj_i)$r.squared,
+    digits = 3
+  )
+)
+result_i <- unname(
+  round(
+    rsq_of_sigmacap(stats::cov(x_i)),
+    digits = 3
+  )
+)
+testthat::test_that("strRegression-rsq_of_sigmacap", {
+  testthat::expect_equal(
+    answer_i,
+    result_i
+  )
+})
+# clean environment
+rm(
+  n_i,
+  k_i,
+  mu_i,
+  sigmacap_i,
+  x_i,
+  obj_i,
+  answer_i,
+  result_i
+)
