@@ -33,7 +33,7 @@ answer_i <- unname(
   stats::coef(
     lm(
       y ~ .,
-      data = as.data.frame(x_i)
+      data = x_i
     )
   )[-1]
 )

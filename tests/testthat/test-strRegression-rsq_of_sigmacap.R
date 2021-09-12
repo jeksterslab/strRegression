@@ -29,7 +29,7 @@ x_i <- rmvn_chol(
   ),
   data_frame = TRUE
 )
-obj_i <- lm(y ~ ., data = as.data.frame(x_i))
+obj_i <- lm(y ~ ., data = x_i)
 answer_i <- unname(
   round(
     summary.lm(obj_i)$r.squared,

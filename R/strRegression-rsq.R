@@ -50,15 +50,18 @@ rsq <- function(beta,
       sigmacapx
     )
   )
-  sigmacap[1, 1] <- drop(
+  sigmaysq <- drop(
     sigmasq + (
       sigmayx %*% beta
     )
   )
+  sigmacap[1, 1] <- sigmaysq
   sigmacap[1, 2:k] <- sigmayx
   sigmacap[2:k, 1] <- sigmayx
   sigmacap[2:k, 2:k] <- sigmacapx
   return(
-    rsq_of_sigmacap(sigmacap)
+    1 - (
+      det(sigmacap) / det(sigmacapx)
+    ) / sigmaysq
   )
 }

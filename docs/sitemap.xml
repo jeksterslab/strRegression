@@ -13,10 +13,10 @@
     <loc>https://github.com/jeksterslab-r/strRegression//reference/betastar_of_sigmacap.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/betastar_of_theta.html</loc>
+    <loc>https://github.com/jeksterslab-r/strRegression//reference/betastar_of_vechsigmacap.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/betastar_of_vechsigmacap.html</loc>
+    <loc>https://github.com/jeksterslab-r/strRegression//reference/moments_helper.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab-r/strRegression//reference/rmvn_chol.html</loc>
@@ -40,10 +40,40 @@
     <loc>https://github.com/jeksterslab-r/strRegression//reference/sym_of_vech.html</loc>
   </url>
   <url>
+    <loc>https://github.com/jeksterslab-r/strRegression//reference/sym_of_vechs.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab-r/strRegression//reference/theta.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab-r/strRegression//reference/theta_helper.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab-r/strRegression//reference/theta_of_moments.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab-r/strRegression//reference/theta_of_sigmacap.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab-r/strRegression//reference/theta_of_vechsigmacap.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab-r/strRegression//reference/thetastar.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab-r/strRegression//reference/thetastar_of_sigmacap.html</loc>
+  </url>
+  <url>
     <loc>https://github.com/jeksterslab-r/strRegression//reference/vech.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab-r/strRegression//reference/vechnames.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab-r/strRegression//reference/vechs.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab-r/strRegression//reference/vechsnames.html</loc>
   </url>
   <url>
     <loc>https://github.com/jeksterslab-r/strRegression//articles/session.html</loc>

@@ -29,7 +29,7 @@ x_i <- rmvn_chol(
   ),
   data_frame = TRUE
 )
-obj_i <- lm(y ~ ., data = as.data.frame(x_i))
+obj_i <- lm(y ~ ., data = x_i)
 beta_i <- stats::coef(obj_i)[-1]
 sigmacap_i <- stats::cov(x_i)
 sigmacapx_i <- sigmacap_i[2:k_i, 2:k_i, drop = FALSE]

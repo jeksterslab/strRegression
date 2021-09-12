@@ -6,8 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Standardized Regression Coefficients
-as a Function of the Vector of Regression Parameters — betastar_of_theta • strRegression</title>
+<title>Vector Names for Strict Half-Vectorization — vechsnames • strRegression</title>
 
 
 <!-- jquery -->
@@ -40,10 +39,8 @@ as a Function of the Vector of Regression Parameters — betastar_of_theta • s
 
 
 
-<meta property="og:title" content="Standardized Regression Coefficients
-as a Function of the Vector of Regression Parameters — betastar_of_theta" />
-<meta property="og:description" content="Standardized Regression Coefficients
-as a Function of the Vector of Regression Parameters" />
+<meta property="og:title" content="Vector Names for Strict Half-Vectorization — vechsnames" />
+<meta property="og:description" content="Vector Names for Strict Half-Vectorization" />
 
 
 
@@ -124,64 +121,58 @@ as a Function of the Vector of Regression Parameters" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Standardized Regression Coefficients
-as a Function of the Vector of Regression Parameters</h1>
+    <h1>Vector Names for Strict Half-Vectorization</h1>
     
-    <div class="hidden name"><code>betastar_of_theta.Rd</code></div>
+    <div class="hidden name"><code>vechsnames.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Standardized Regression Coefficients
-as a Function of the Vector of Regression Parameters</p>
+    <p>Vector Names for Strict Half-Vectorization</p>
     </div>
 
-    <pre class="usage"><span class='fu'>betastar_of_theta</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>vechsnames</span><span class='op'>(</span><span class='va'>x</span>, sep <span class='op'>=</span> <span class='st'>"."</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>Numeric vector.
-Vector of parameters
-\(\boldsymbol{theta}
-  =
-  \{
-    \boldsymbol{\beta},
-    \sigma^2,
-    \mathrm{\vech}
-    \left( \boldsymbol{\Sigma}_{\mathbf{X}, \mathbf{X}} \right)
-  \}^{\prime}
-  \).</p></td>
+      <td><p>Character vector of names.</p></td>
+    </tr>
+    <tr>
+      <th>sep</th>
+      <td><p>Character string.
+Separator for variable names.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A numeric vector.</p>
-    <h2 class="hasAnchor" id="dependencies"><a class="anchor" href="#dependencies"></a>Dependencies</h2>
+    <p>A vector.</p>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    
-<ul>
-<li><p><code><a href='sym_of_vech.html'>sym_of_vech()</a></code></p></li>
-<li><p><code><a href='rmvn_chol.html'>rmvn_chol()</a></code> (test)</p></li>
-</ul>
-
+    <p><a href='https://en.wikipedia.org/wiki/Vectorization_(mathematics)#Half-vectorization'>Wikipedia: Half-vectorization</a></p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other Structure of Regression Functions: 
-<code><a href='beta_of_sigmacap.html'>beta_of_sigmacap</a>()</code>,
-<code><a href='betastar_of_rhocap.html'>betastar_of_rhocap</a>()</code>,
-<code><a href='betastar_of_sigmacap.html'>betastar_of_sigmacap</a>()</code>,
-<code><a href='betastar_of_vechsigmacap.html'>betastar_of_vechsigmacap</a>()</code>,
-<code><a href='rsq_of_sigmacap.html'>rsq_of_sigmacap</a>()</code>,
-<code><a href='rsq.html'>rsq</a>()</code>,
-<code><a href='sigmasq.html'>sigmasq</a>()</code>,
-<code><a href='sigmaysq.html'>sigmaysq</a>()</code></p></div>
+    <div class='dont-index'><p>Other Linear Algebra Functions: 
+<code><a href='sym_of_vechs.html'>sym_of_vechs</a>()</code>,
+<code><a href='sym_of_vech.html'>sym_of_vech</a>()</code>,
+<code><a href='vechnames.html'>vechnames</a>()</code>,
+<code><a href='vechs.html'>vechs</a>()</code>,
+<code><a href='vech.html'>vech</a>()</code></p></div>
     <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
     <p>Ivan Jacob Agaloos Pesigan</p>
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"x1"</span>, <span class='st'>"x2"</span><span class='op'>)</span>
+<span class='fu'>vechsnames</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "x1.x2"</div><div class='input'>
+<span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='fl'>3</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"x1"</span>, <span class='st'>"x2"</span>, <span class='st'>"x3"</span><span class='op'>)</span>
+<span class='fu'>vechsnames</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "x1.x2" "x1.x3" "x2.x3"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

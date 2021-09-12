@@ -29,7 +29,6 @@ betastar_of_rhocap <- function(x) {
     all(diag(x) == 1),
     all(abs(as.vector(x)) <= 1)
   )
-
   return(
     drop(
       solve(

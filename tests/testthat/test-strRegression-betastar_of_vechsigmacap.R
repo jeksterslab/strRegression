@@ -29,6 +29,8 @@ x_i <- rmvn_chol(
   ),
   data_frame = TRUE
 )
+vech_i <- cov(x_i)
+vech_i <- vech_i[lower.tri(vech_i, diag = TRUE)]
 answer_i <- unname(
   stats::coef(
     lm(
@@ -38,9 +40,7 @@ answer_i <- unname(
   )[-1]
 )
 result_i <- unname(
-  betastar_of_vechsigmacap(
-    vech(cov(x_i))
-  )
+  betastar_of_vechsigmacap(vech_i)
 )
 testthat::test_that("strRegression-betastar_of_vechsigmacap", {
   testthat::expect_true(
@@ -51,6 +51,11 @@ testthat::test_that("strRegression-betastar_of_vechsigmacap", {
     )
   )
 })
+testthat::test_that("strRegression-betastar_of_vechsigmacap error", {
+  testthat::expect_error(
+    betastar_of_vechsigmacap(c(1, 1))
+  )
+})
 # clean environment
 rm(
   tol_i,
@@ -58,6 +63,7 @@ rm(
   k_i,
   mu_i,
   sigmacap_i,
+  vech_i,
   x_i,
   answer_i,
   result_i

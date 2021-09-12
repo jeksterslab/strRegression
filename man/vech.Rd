@@ -50,8 +50,11 @@ vech(x)
 }
 \seealso{
 Other Linear Algebra Functions: 
+\code{\link{sym_of_vechs}()},
 \code{\link{sym_of_vech}()},
-\code{\link{vechnames}()}
+\code{\link{vechnames}()},
+\code{\link{vechsnames}()},
+\code{\link{vechs}()}
 }
 \author{
 Ivan Jacob Agaloos Pesigan

@@ -23,7 +23,6 @@ of the Covariance Matrix
 }
 \section{Dependencies}{
 \itemize{
-\item \code{\link[=sym_of_vech]{sym_of_vech()}}
 \item \code{\link[=rmvn_chol]{rmvn_chol()}} (test)
 }
 }
@@ -33,11 +32,18 @@ Other Structure of Regression Functions:
 \code{\link{beta_of_sigmacap}()},
 \code{\link{betastar_of_rhocap}()},
 \code{\link{betastar_of_sigmacap}()},
-\code{\link{betastar_of_theta}()},
+\code{\link{moments_helper}()},
 \code{\link{rsq_of_sigmacap}()},
 \code{\link{rsq}()},
 \code{\link{sigmasq}()},
-\code{\link{sigmaysq}()}
+\code{\link{sigmaysq}()},
+\code{\link{theta_helper}()},
+\code{\link{theta_of_moments}()},
+\code{\link{theta_of_sigmacap}()},
+\code{\link{theta_of_vechsigmacap}()},
+\code{\link{thetastar_of_sigmacap}()},
+\code{\link{thetastar}()},
+\code{\link{theta}()}
 }
 \author{
 Ivan Jacob Agaloos Pesigan
