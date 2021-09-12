@@ -6,8 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Helper Function to Convert a Vector of Moments
-to the Mean Vector and Covariance Matrix — moments_helper • strRegression</title>
+<title>Standardized Regression Coefficients
+as a Function of the Vector of Regression Parameters — betastar_of_theta • strRegression</title>
 
 
 <!-- jquery -->
@@ -40,10 +40,10 @@ to the Mean Vector and Covariance Matrix — moments_helper • strRegression</t
 
 
 
-<meta property="og:title" content="Helper Function to Convert a Vector of Moments
-to the Mean Vector and Covariance Matrix — moments_helper" />
-<meta property="og:description" content="Helper Function to Convert a Vector of Moments
-to the Mean Vector and Covariance Matrix" />
+<meta property="og:title" content="Standardized Regression Coefficients
+as a Function of the Vector of Regression Parameters — betastar_of_theta" />
+<meta property="og:description" content="Standardized Regression Coefficients
+as a Function of the Vector of Regression Parameters" />
 
 
 
@@ -124,18 +124,18 @@ to the Mean Vector and Covariance Matrix" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Helper Function to Convert a Vector of Moments
-to the Mean Vector and Covariance Matrix</h1>
+    <h1>Standardized Regression Coefficients
+as a Function of the Vector of Regression Parameters</h1>
     
-    <div class="hidden name"><code>moments_helper.Rd</code></div>
+    <div class="hidden name"><code>betastar_of_theta.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Helper Function to Convert a Vector of Moments
-to the Mean Vector and Covariance Matrix</p>
+    <p>Standardized Regression Coefficients
+as a Function of the Vector of Regression Parameters</p>
     </div>
 
-    <pre class="usage"><span class='fu'>moments_helper</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>betastar_of_theta</span><span class='op'>(</span><span class='va'>x</span>, mean_structure <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -144,28 +144,55 @@ to the Mean Vector and Covariance Matrix</p>
       <th>x</th>
       <td><p>Numeric vector.
 Vector of parameters
-\(
-    \boldsymbol{\theta}
-    =
-    \{
-      \boldsymbol{\mu} ,
-      \mathrm{vech} \left( \boldsymbol{\Sigma} \right)
-    \}^{\prime}
-  \).</p></td>
+\(\boldsymbol{theta}
+  =
+  \{
+    \boldsymbol{\beta},
+    \sigma^2,
+    \mathrm{\vech}
+    \left( \boldsymbol{\Sigma}_{\mathbf{X}, \mathbf{X}} \right)
+  \}^{\prime}
+  \) when <code>mean_structure = FALSE</code> or
+\(\boldsymbol{theta}
+  =
+  \{
+    \boldsymbol{\beta},
+    \sigma^2,
+    \mathrm{\vech}
+    \left( \boldsymbol{\Sigma}_{\mathbf{X}, \mathbf{X}} \right),
+    \alpha,
+    \boldsymbol{\mu}_{\mathbf{X}}
+  \}^{\prime}
+  \) when <code>mean_structure = TRUE</code></p></td>
+    </tr>
+    <tr>
+      <th>mean_structure</th>
+      <td><p>Logical.
+If <code>mean_structure = TRUE</code>,
+<code>x</code> includes mean structure parameters.
+If <code>mean_structure = FALSE</code>,
+<code>x</code> only includes covariance structure parameters.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A list with elements <code>mu</code> and <code>sigmacap</code>.</p>
+    <p>A numeric vector.</p>
+    <h2 class="hasAnchor" id="dependencies"><a class="anchor" href="#dependencies"></a>Dependencies</h2>
+
+    
+<ul>
+<li><p><code><a href='rmvn_chol.html'>rmvn_chol()</a></code> (test)</p></li>
+</ul>
+
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other Structure of Regression Functions: 
 <code><a href='beta_of_sigmacap.html'>beta_of_sigmacap</a>()</code>,
 <code><a href='betastar_of_rhocap.html'>betastar_of_rhocap</a>()</code>,
 <code><a href='betastar_of_sigmacap.html'>betastar_of_sigmacap</a>()</code>,
-<code><a href='betastar_of_theta.html'>betastar_of_theta</a>()</code>,
 <code><a href='betastar_of_vechsigmacap.html'>betastar_of_vechsigmacap</a>()</code>,
+<code><a href='moments_helper.html'>moments_helper</a>()</code>,
 <code><a href='rsq_of_sigmacap.html'>rsq_of_sigmacap</a>()</code>,
 <code><a href='rsq.html'>rsq</a>()</code>,
 <code><a href='sigmasq.html'>sigmasq</a>()</code>,
@@ -177,19 +204,10 @@ Vector of parameters
 <code><a href='thetastar_of_sigmacap.html'>thetastar_of_sigmacap</a>()</code>,
 <code><a href='thetastar.html'>thetastar</a>()</code>,
 <code><a href='theta.html'>theta</a>()</code></p></div>
+    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>moments_helper</span><span class='op'>(</span>
-  x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>0</span>, <span class='fl'>1</span>, <span class='fl'>0.5</span>, <span class='fl'>1</span><span class='op'>)</span>
-<span class='op'>)</span>
-</div><div class='output co'>#&gt; $mu
-#&gt; [1] 0 0
-#&gt; 
-#&gt; $sigmacap
-#&gt;      [,1] [,2]
-#&gt; [1,]  1.0  0.5
-#&gt; [2,]  0.5  1.0
-#&gt; </div></pre>
+    <p>Ivan Jacob Agaloos Pesigan</p>
+
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

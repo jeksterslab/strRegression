@@ -35,6 +35,7 @@ Other Structure of Regression Functions:
 \code{\link{beta_of_sigmacap}()},
 \code{\link{betastar_of_rhocap}()},
 \code{\link{betastar_of_sigmacap}()},
+\code{\link{betastar_of_theta}()},
 \code{\link{betastar_of_vechsigmacap}()},
 \code{\link{moments_helper}()},
 \code{\link{rsq_of_sigmacap}()},
