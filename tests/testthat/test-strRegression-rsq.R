@@ -52,7 +52,7 @@ result_i <- unname(
     digits = 3
   )
 )
-testthat::test_that("strRegression-rsq", {
+testthat::test_that("test-strRegression-rsq", {
   testthat::expect_true(
     all(
       abs(

@@ -1,3 +1,29 @@
+#' Regression Coefficients
+#' as a Function of the Covariance Matrix
+#'
+#' @details
+#' # Dependencies
+#' * [rmvn_chol()] (test)
+#'
+#' @author Ivan Jacob Agaloos Pesigan
+#'
+#' @param sigmacapx Numeric matrix.
+#'   Covariance matrix of the regressors.
+#' @param sigmayx Numeric vector.
+#'   Covariances between the regressand and regressor variables
+#'   \eqn{
+#'     \boldsymbol{\sigma}_{y , \mathbf{X}}
+#'     =
+#'     \{ \sigma_{y, x_1}, \sigma_{y, x_j}, \sigma_{y, x_p} \}^{\prime}
+#'   }
+#'   where
+#'   \eqn{j = \{ 1, \cdots, p \}}.
+#'
+#' @returns A numeric vector.
+#'
+#' @export
+#' @family Structure of Regression Functions
+#' @keywords strRegression
 beta <- function(sigmacapx,
                  sigmayx) {
   stopifnot(

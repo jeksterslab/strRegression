@@ -10,8 +10,10 @@ theta_of_vechsigmacap(x)
 }
 \arguments{
 \item{x}{Numeric vector.
-Half-vectorization of the covariance matrix of
-\eqn{\{y, x_1, \cdots, x_p \}^{\prime}}.}
+Half-vectorization of the covariance matrix
+\eqn{\boldsymbol{\Sigma}}
+of
+\eqn{\left\{y, x_1, \dots, x_p \right\}^{\prime}}.}
 }
 \value{
 A numeric vector.
@@ -30,18 +32,28 @@ of the Covariance Matrix
 \seealso{
 Other Structure of Regression Functions: 
 \code{\link{beta_of_sigmacap}()},
+\code{\link{beta_of_vechsigmacap}()},
+\code{\link{beta_wrt_vechsigmacap}()},
 \code{\link{betastar_of_rhocap}()},
 \code{\link{betastar_of_sigmacap}()},
 \code{\link{betastar_of_theta}()},
 \code{\link{betastar_of_vechsigmacap}()},
+\code{\link{beta}()},
 \code{\link{moments_helper}()},
+\code{\link{mu_of_theta}()},
 \code{\link{rsq_of_sigmacap}()},
+\code{\link{rsq_of_theta}()},
 \code{\link{rsq}()},
+\code{\link{sigmacap_of_thetastar}()},
+\code{\link{sigmacap_of_theta}()},
+\code{\link{sigmasq_of_vechsigmacap}()},
 \code{\link{sigmasq}()},
 \code{\link{sigmaysq}()},
 \code{\link{theta_helper}()},
 \code{\link{theta_of_moments}()},
 \code{\link{theta_of_sigmacap}()},
+\code{\link{theta_wrt_vechsigmacap}()},
+\code{\link{thetastar_helper}()},
 \code{\link{thetastar_of_sigmacap}()},
 \code{\link{thetastar}()},
 \code{\link{theta}()}

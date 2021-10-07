@@ -60,7 +60,7 @@ result_i <- unname(
     cov(x_i)
   )
 )
-testthat::test_that("strRegression-thetastar", {
+testthat::test_that("test-strRegression-thetastar", {
   testthat::expect_true(
     all(
       abs(

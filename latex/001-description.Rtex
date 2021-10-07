@@ -1,11 +1,6 @@
 \documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage{hyperref}
 
-\usepackage{amsfonts}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{amsthm}
+\input{latex/preamble/preamble}
 
 \title{strRegression: Structure of Regression}
 \author{Ivan Jacob Agaloos Pesigan}

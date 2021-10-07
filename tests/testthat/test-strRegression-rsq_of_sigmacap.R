@@ -42,7 +42,7 @@ result_i <- unname(
     digits = 3
   )
 )
-testthat::test_that("strRegression-rsq_of_sigmacap", {
+testthat::test_that("test-strRegression-rsq_of_sigmacap", {
   testthat::expect_true(
     all(
       abs(

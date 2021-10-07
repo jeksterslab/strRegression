@@ -6,18 +6,14 @@
 #'   \eqn{
 #'     \boldsymbol{\theta}
 #'     =
-#'     \{
+#'     \left\{
 #'       \boldsymbol{\mu} ,
 #'       \mathrm{vech} \left( \boldsymbol{\Sigma} \right)
-#'     \}^{\prime}
+#'     \right\}^{\prime}
 #'   }.
 #'
 #' @returns A list with elements `mu` and `sigmacap`.
 #'
-#' @examples
-#' moments_helper(
-#'   x = c(0, 0, 1, 0.5, 1)
-#' )
 #' @export
 #' @family Structure of Regression Functions
 #' @keywords strRegression

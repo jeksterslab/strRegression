@@ -42,7 +42,7 @@ answer_i <- unname(
 result_i <- unname(
   betastar_of_vechsigmacap(vech_i)
 )
-testthat::test_that("strRegression-betastar_of_vechsigmacap", {
+testthat::test_that("test-strRegression-betastar_of_vechsigmacap", {
   testthat::expect_true(
     all(
       abs(
@@ -51,9 +51,18 @@ testthat::test_that("strRegression-betastar_of_vechsigmacap", {
     )
   )
 })
-testthat::test_that("strRegression-betastar_of_vechsigmacap error", {
+testthat::test_that("test-strRegression-betastar_of_vechsigmacap error", {
   testthat::expect_error(
     betastar_of_vechsigmacap(c(1, 1))
+  )
+})
+testthat::test_that("test-strRegression-betastar_of_vechsigmacap NA", {
+  testthat::expect_true(
+    any(
+      is.na(
+        betastar_of_vechsigmacap(c(-1, -1, -1))
+      )
+    )
   )
 })
 # clean environment

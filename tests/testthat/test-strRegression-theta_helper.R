@@ -9,19 +9,19 @@ theta_i <- theta_helper(
   ),
   mean_structure = TRUE
 )
-testthat::test_that("strRegression-theta_helper beta", {
+testthat::test_that("test-strRegression-theta_helper beta", {
   testthat::expect_equal(
     theta_i$beta,
     c(0.5, 0.5)
   )
 })
-testthat::test_that("strRegression-theta_helper sigmasq", {
+testthat::test_that("test-strRegression-theta_helper sigmasq", {
   testthat::expect_equal(
     theta_i$sigmasq,
     1
   )
 })
-testthat::test_that("strRegression-theta_helper sigmacapx", {
+testthat::test_that("test-strRegression-theta_helper sigmacapx", {
   testthat::expect_equal(
     theta_i$sigmacapx,
     matrix(
@@ -35,25 +35,25 @@ testthat::test_that("strRegression-theta_helper sigmacapx", {
     )
   )
 })
-testthat::test_that("strRegression-theta_helper alpha", {
+testthat::test_that("test-strRegression-theta_helper alpha", {
   testthat::expect_equal(
     theta_i$alpha,
     0
   )
 })
-testthat::test_that("strRegression-theta_helper mux", {
+testthat::test_that("test-strRegression-theta_helper mux", {
   testthat::expect_equal(
     theta_i$mux,
     c(0, 0)
   )
 })
 # expect_error
-testthat::test_that("strRegression-theta_helper error", {
+testthat::test_that("test-strRegression-theta_helper error", {
   testthat::expect_error(
     theta_helper(1:4)
   )
 })
-testthat::test_that("strRegression-theta_helper error2", {
+testthat::test_that("test-strRegression-theta_helper error2", {
   testthat::expect_error(
     theta_helper(1:6, mean_structure = TRUE)
   )

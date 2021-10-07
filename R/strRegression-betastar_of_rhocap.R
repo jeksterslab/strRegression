@@ -11,7 +11,7 @@
 #'   Correlation matrix
 #'   \eqn{\mathbf{P}}
 #'   of
-#'   \eqn{\{y, x_1, \cdots, x_p \}^{\prime}}.
+#'   \eqn{\left\{y, x_1, \dots, x_p \right\}^{\prime}}.
 #'
 #' @returns A numeric vector.
 #'

@@ -147,10 +147,10 @@ Vector of parameters
 \(
     \boldsymbol{\theta}
     =
-    \{
+    \left\{
       \boldsymbol{\mu} ,
       \mathrm{vech} \left( \boldsymbol{\Sigma} \right)
-    \}^{\prime}
+    \right\}^{\prime}
   \).</p></td>
     </tr>
     </table>
@@ -162,34 +162,32 @@ Vector of parameters
 
     <div class='dont-index'><p>Other Structure of Regression Functions: 
 <code><a href='beta_of_sigmacap.html'>beta_of_sigmacap</a>()</code>,
+<code><a href='beta_of_vechsigmacap.html'>beta_of_vechsigmacap</a>()</code>,
+<code><a href='beta_wrt_vechsigmacap.html'>beta_wrt_vechsigmacap</a>()</code>,
 <code><a href='betastar_of_rhocap.html'>betastar_of_rhocap</a>()</code>,
 <code><a href='betastar_of_sigmacap.html'>betastar_of_sigmacap</a>()</code>,
 <code><a href='betastar_of_theta.html'>betastar_of_theta</a>()</code>,
 <code><a href='betastar_of_vechsigmacap.html'>betastar_of_vechsigmacap</a>()</code>,
+<code><a href='beta.html'>beta</a>()</code>,
+<code><a href='mu_of_theta.html'>mu_of_theta</a>()</code>,
 <code><a href='rsq_of_sigmacap.html'>rsq_of_sigmacap</a>()</code>,
+<code><a href='rsq_of_theta.html'>rsq_of_theta</a>()</code>,
 <code><a href='rsq.html'>rsq</a>()</code>,
+<code><a href='sigmacap_of_thetastar.html'>sigmacap_of_thetastar</a>()</code>,
+<code><a href='sigmacap_of_theta.html'>sigmacap_of_theta</a>()</code>,
+<code><a href='sigmasq_of_vechsigmacap.html'>sigmasq_of_vechsigmacap</a>()</code>,
 <code><a href='sigmasq.html'>sigmasq</a>()</code>,
 <code><a href='sigmaysq.html'>sigmaysq</a>()</code>,
 <code><a href='theta_helper.html'>theta_helper</a>()</code>,
 <code><a href='theta_of_moments.html'>theta_of_moments</a>()</code>,
 <code><a href='theta_of_sigmacap.html'>theta_of_sigmacap</a>()</code>,
 <code><a href='theta_of_vechsigmacap.html'>theta_of_vechsigmacap</a>()</code>,
+<code><a href='theta_wrt_vechsigmacap.html'>theta_wrt_vechsigmacap</a>()</code>,
+<code><a href='thetastar_helper.html'>thetastar_helper</a>()</code>,
 <code><a href='thetastar_of_sigmacap.html'>thetastar_of_sigmacap</a>()</code>,
 <code><a href='thetastar.html'>thetastar</a>()</code>,
 <code><a href='theta.html'>theta</a>()</code></p></div>
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>moments_helper</span><span class='op'>(</span>
-  x <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>0</span>, <span class='fl'>1</span>, <span class='fl'>0.5</span>, <span class='fl'>1</span><span class='op'>)</span>
-<span class='op'>)</span>
-</div><div class='output co'>#&gt; $mu
-#&gt; [1] 0 0
-#&gt; 
-#&gt; $sigmacap
-#&gt;      [,1] [,2]
-#&gt; [1,]  1.0  0.5
-#&gt; [2,]  0.5  1.0
-#&gt; </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -51,7 +51,7 @@ result_i <- unname(
     c(colMeans(x_i), vech_i)
   )
 )
-testthat::test_that("strRegression-theta_of_moments", {
+testthat::test_that("test-strRegression-theta_of_moments", {
   testthat::expect_true(
     all(
       abs(
@@ -60,7 +60,7 @@ testthat::test_that("strRegression-theta_of_moments", {
     )
   )
 })
-testthat::test_that("strRegression-theta_of_moments error", {
+testthat::test_that("test-strRegression-theta_of_moments error", {
   testthat::expect_error(
     theta_of_moments(1:6)
   )

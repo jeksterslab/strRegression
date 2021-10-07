@@ -49,7 +49,7 @@ result_i <- unname(
     digits = 3
   )
 )
-testthat::test_that("strRegression-sigmasq", {
+testthat::test_that("test-strRegression-sigmasq", {
   testthat::expect_true(
     all(
       abs(

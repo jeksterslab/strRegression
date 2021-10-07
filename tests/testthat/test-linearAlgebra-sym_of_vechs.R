@@ -16,7 +16,7 @@ result_i2_i <- sym_of_vechs(
   x_i,
   diags = diag(answer_i)
 )
-testthat::test_that("linearAlgebra-sym_of_vechs 3 by 3", {
+testthat::test_that("test-linearAlgebra-sym_of_vechs 3 by 3", {
   testthat::expect_equal(
     result_i1_i,
     result_i2_i,
@@ -32,7 +32,7 @@ result_i <- sym_of_vechs(
   x_i,
   diags = diag(answer_i)
 )
-testthat::test_that("linearAlgebra-sym_of_vechs 2 by 2", {
+testthat::test_that("test-linearAlgebra-sym_of_vechs 2 by 2", {
   testthat::expect_equal(
     result_i,
     answer_i
@@ -77,19 +77,19 @@ result_i <- sym_of_vechs(
   answer_i[lower.tri(answer_i, diag = FALSE)],
   diags = diag(answer_i)
 )
-testthat::test_that("linearAlgebra-sym_of_vechs random cov", {
+testthat::test_that("test-linearAlgebra-sym_of_vechs random cov", {
   testthat::expect_equal(
     result_i,
     answer_i
   )
 })
 # expect_error
-testthat::test_that("linearAlgebra-sym_of_vechs error", {
+testthat::test_that("test-linearAlgebra-sym_of_vechs error", {
   testthat::expect_error(
     sym_of_vechs(as.matrix(1:5))
   )
 })
-testthat::test_that("linearAlgebra-sym_of_vechs error", {
+testthat::test_that("test-linearAlgebra-sym_of_vechs error", {
   testthat::expect_error(
     sym_of_vechs(rnorm(n = 4), diags = 1)
   )

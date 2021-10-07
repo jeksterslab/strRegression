@@ -13,10 +13,10 @@ Vector of parameters
 \eqn{
     \boldsymbol{\theta}
     =
-    \{
+    \left\{
       \boldsymbol{\mu} ,
       \mathrm{vech} \left( \boldsymbol{\Sigma} \right)
-    \}^{\prime}
+    \right\}^{\prime}
   }.}
 }
 \value{
@@ -26,26 +26,31 @@ A list with elements \code{mu} and \code{sigmacap}.
 Helper Function to Convert a Vector of Moments
 to the Mean Vector and Covariance Matrix
 }
-\examples{
-moments_helper(
-  x = c(0, 0, 1, 0.5, 1)
-)
-}
 \seealso{
 Other Structure of Regression Functions: 
 \code{\link{beta_of_sigmacap}()},
+\code{\link{beta_of_vechsigmacap}()},
+\code{\link{beta_wrt_vechsigmacap}()},
 \code{\link{betastar_of_rhocap}()},
 \code{\link{betastar_of_sigmacap}()},
 \code{\link{betastar_of_theta}()},
 \code{\link{betastar_of_vechsigmacap}()},
+\code{\link{beta}()},
+\code{\link{mu_of_theta}()},
 \code{\link{rsq_of_sigmacap}()},
+\code{\link{rsq_of_theta}()},
 \code{\link{rsq}()},
+\code{\link{sigmacap_of_thetastar}()},
+\code{\link{sigmacap_of_theta}()},
+\code{\link{sigmasq_of_vechsigmacap}()},
 \code{\link{sigmasq}()},
 \code{\link{sigmaysq}()},
 \code{\link{theta_helper}()},
 \code{\link{theta_of_moments}()},
 \code{\link{theta_of_sigmacap}()},
 \code{\link{theta_of_vechsigmacap}()},
+\code{\link{theta_wrt_vechsigmacap}()},
+\code{\link{thetastar_helper}()},
 \code{\link{thetastar_of_sigmacap}()},
 \code{\link{thetastar}()},
 \code{\link{theta}()}

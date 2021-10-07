@@ -49,7 +49,7 @@ result_i <- unname(
     theta_i
   )
 )
-testthat::test_that("strRegression-betastar_of_theta", {
+testthat::test_that("test-strRegression-betastar_of_theta", {
   testthat::expect_true(
     all(
       abs(
@@ -58,9 +58,18 @@ testthat::test_that("strRegression-betastar_of_theta", {
     )
   )
 })
-testthat::test_that("strRegression-betastar_of_theta error", {
+testthat::test_that("test-strRegression-betastar_of_theta error", {
   testthat::expect_error(
     betastar_of_theta(c(1, 1))
+  )
+})
+testthat::test_that("test-strRegression-betastar_of_theta NA", {
+  testthat::expect_true(
+    any(
+      is.na(
+        betastar_of_theta(c(-1, -1, -1))
+      )
+    )
   )
 })
 # clean environment

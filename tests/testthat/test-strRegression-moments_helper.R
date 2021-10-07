@@ -8,20 +8,20 @@ theta_i <- moments_helper(
     vech_x_i
   )
 )
-testthat::test_that("strRegression-moments_helper means", {
+testthat::test_that("test-strRegression-moments_helper means", {
   testthat::expect_equal(
     theta_i$mu,
     rep(x = 0, times = k_i)
   )
 })
-testthat::test_that("strRegression-moments_helper covariances", {
+testthat::test_that("test-strRegression-moments_helper covariances", {
   testthat::expect_equal(
     theta_i$sigmacap,
     toeplitz((k_i:1) / k_i)
   )
 })
 # expect_error
-testthat::test_that("strRegression-moments_helper error", {
+testthat::test_that("test-strRegression-moments_helper error", {
   testthat::expect_error(
     moments_helper(1:6)
   )

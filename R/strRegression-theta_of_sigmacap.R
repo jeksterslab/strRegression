@@ -41,11 +41,15 @@ theta_of_sigmacap <- function(x) {
       tcrossprod(beta, sigmacapx) %*% beta
     )
   )
-  return(
-    c(
-      beta,
-      sigmasq,
-      sigmacapx[lower.tri(sigmacapx, diag = TRUE)]
-    )
+  output <- c(
+    beta,
+    sigmasq,
+    sigmacapx[lower.tri(sigmacapx, diag = TRUE)]
   )
+  names(output) <- c(
+    paste0("beta", seq_len(p)),
+    "sigmasq",
+    vechnames(paste0("x", seq_len(p)))
+  )
+  return(output)
 }

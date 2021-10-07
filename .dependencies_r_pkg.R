@@ -2,7 +2,7 @@
 lib <- ".library"
 installed <- installed.packages(lib = lib)
 pkg <- c(
-  "remotes"
+  "numDeriv"
 )
 for (i in seq_along(pkg)) {
   if (!(pkg[i] %in% installed)) {

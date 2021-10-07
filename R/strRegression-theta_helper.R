@@ -35,7 +35,7 @@
 #'   If `mean_structure = FALSE`,
 #'   `x` only includes covariance structure parameters.
 #'
-#' @returns A numeric vector.
+#' @returns A list.
 #'
 #' @export
 #' @family Structure of Regression Functions

@@ -42,7 +42,7 @@ result_i <- unname(
     cov(x_i)
   )
 )
-testthat::test_that("strRegression-beta_of_sigmacap", {
+testthat::test_that("test-strRegression-beta_of_sigmacap", {
   testthat::expect_true(
     all(
       abs(

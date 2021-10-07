@@ -1,87 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//index.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//index.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/beta_of_sigmacap.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/beta.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/betastar_of_rhocap.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/beta_of_sigmacap.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/betastar_of_sigmacap.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/beta_of_vechsigmacap.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/betastar_of_theta.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/beta_wrt_vechsigmacap.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/betastar_of_vechsigmacap.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/betastar_of_rhocap.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/moments_helper.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/betastar_of_sigmacap.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/rmvn_chol.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/betastar_of_theta.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/rsq.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/betastar_of_vechsigmacap.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/rsq_of_sigmacap.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/dcap.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/sigmasq.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/moments_helper.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/sigmaysq.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/mu_of_theta.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/strRegression.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/rmvn_chol.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/sym_of_vech.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/rsq.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/sym_of_vechs.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/rsq_of_sigmacap.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/theta.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/rsq_of_theta.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/theta_helper.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/sigmacap_of_theta.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/theta_of_moments.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/sigmacap_of_thetastar.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/theta_of_sigmacap.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/sigmasq.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/theta_of_vechsigmacap.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/sigmasq_of_vechsigmacap.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/thetastar.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/sigmaysq.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/thetastar_of_sigmacap.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/strRegression.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/vech.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/sym_of_vech.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/vechnames.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/sym_of_vechs.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/vechs.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/theta.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//reference/vechsnames.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/theta_helper.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//articles/session.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/theta_of_moments.html</loc>
   </url>
   <url>
-    <loc>https://github.com/jeksterslab-r/strRegression//articles/strRegression.html</loc>
+    <loc>https://github.com/jeksterslab/strRegression//reference/theta_of_sigmacap.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/strRegression//reference/theta_of_vechsigmacap.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/strRegression//reference/theta_wrt_vechsigmacap.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/strRegression//reference/thetastar.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/strRegression//reference/thetastar_helper.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/strRegression//reference/thetastar_of_sigmacap.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/strRegression//reference/vech.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/strRegression//reference/vechnames.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/strRegression//reference/vechs.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/strRegression//reference/vechsnames.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/strRegression//articles/session.html</loc>
+  </url>
+  <url>
+    <loc>https://github.com/jeksterslab/strRegression//articles/strRegression.html</loc>
   </url>
 </urlset>

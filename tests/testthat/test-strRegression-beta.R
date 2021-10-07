@@ -43,7 +43,7 @@ result_i <- unname(
     sigmayx = cov(x_i)[1, 2:k_i]
   )
 )
-testthat::test_that("strRegression-beta", {
+testthat::test_that("test-strRegression-beta", {
   testthat::expect_true(
     all(
       abs(

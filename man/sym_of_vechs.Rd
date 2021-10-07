@@ -41,6 +41,7 @@ sym_of_vechs(vechsA, diags = 1)
 }
 \seealso{
 Other Linear Algebra Functions: 
+\code{\link{dcap}()},
 \code{\link{sym_of_vech}()},
 \code{\link{vechnames}()},
 \code{\link{vechsnames}()},

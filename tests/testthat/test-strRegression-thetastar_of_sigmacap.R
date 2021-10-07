@@ -2,7 +2,7 @@
 tol_i <- 0.01
 n_i <- 100000
 k_i <- sample(
-  2:10,
+  3:10,
   size = 1
 )
 mu_i <- rep(
@@ -60,7 +60,7 @@ result_i <- unname(
     cov(x_i)
   )
 )
-testthat::test_that("strRegression-thetastar_of_sigmacap", {
+testthat::test_that("test-strRegression-thetastar_of_sigmacap", {
   testthat::expect_true(
     all(
       abs(

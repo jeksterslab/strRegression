@@ -9,8 +9,10 @@
 #' @author Ivan Jacob Agaloos Pesigan
 #'
 #' @param x Numeric vector.
-#'   Half-vectorization of the covariance matrix of
-#'   \eqn{\{y, x_1, \cdots, x_p \}^{\prime}}.
+#'   Half-vectorization of the covariance matrix
+#'   \eqn{\boldsymbol{\Sigma}}
+#'   of
+#'   \eqn{\left\{y, x_1, \dots, x_p \right\}^{\prime}}.
 #'
 #' @returns A numeric vector.
 #'

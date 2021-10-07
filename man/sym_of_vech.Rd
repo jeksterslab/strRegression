@@ -37,6 +37,7 @@ sym_of_vech(vechA)
 }
 \seealso{
 Other Linear Algebra Functions: 
+\code{\link{dcap}()},
 \code{\link{sym_of_vechs}()},
 \code{\link{vechnames}()},
 \code{\link{vechsnames}()},

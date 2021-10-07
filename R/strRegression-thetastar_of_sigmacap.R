@@ -40,21 +40,30 @@ thetastar_of_sigmacap <- function(x) {
   sigmax <- sqrt(diag(x[2:k, 2:k, drop = FALSE]))
   if (p > 1) {
     vechsrhocapx <- rhocapx[lower.tri(rhocapx, diag = FALSE)]
-    return(
-      c(
-        betastar,
-        sigmay,
-        sigmax,
-        vechsrhocapx
-      )
+    output <- c(
+      betastar,
+      sigmay,
+      sigmax,
+      vechsrhocapx
     )
+    names(output) <- c(
+      paste0("betastar", seq_len(p)),
+      "sigmay",
+      paste0("sigmax", seq_len(p)),
+      vechsnames(paste0("x", seq_len(p)))
+    )
+    return(output)
   } else {
-    return(
-      c(
-        betastar,
-        sigmay,
-        sigmax
-      )
+    output <- c(
+      betastar,
+      sigmay,
+      sigmax
     )
+    names(output) <- c(
+      paste0("betastar", seq_len(p)),
+      "sigmay",
+      paste0("sigmax", seq_len(p))
+    )
+    return(output)
   }
 }

@@ -9,8 +9,10 @@
 #' @author Ivan Jacob Agaloos Pesigan
 #'
 #' @param x Numeric vector.
-#'   Half-vectorization of the covariance matrix of
-#'   \eqn{\{y, x_1, \cdots, x_p \}^{\prime}}.
+#'   Half-vectorization of the covariance matrix
+#'   \eqn{\boldsymbol{\Sigma}}
+#'   of
+#'   \eqn{\left\{y, x_1, \dots, x_p \right\}^{\prime}}.
 #'
 #' @returns A numeric vector.
 #'
@@ -22,6 +24,7 @@ betastar_of_vechsigmacap <- function(x) {
     is.vector(x)
   )
   k <- 0.5 * (sqrt(1 + 8 * length(x)) - 1)
+  p <- k - 1
   sigmacap <- matrix(
     data = 0,
     nrow = k,
@@ -32,6 +35,14 @@ betastar_of_vechsigmacap <- function(x) {
   }
   sigmacap[lower.tri(sigmacap, diag = TRUE)] <- x
   sigmacap[upper.tri(sigmacap)] <- t(sigmacap)[upper.tri(sigmacap)]
+  if (any(diag(sigmacap) <= 0)) {
+    return(
+      rep(
+        x = NA,
+        times = p
+      )
+    )
+  }
   d <- diag(k - 1)
   diag(d) <- sqrt(
     diag(sigmacap)[-1] / sigmacap[1:1]

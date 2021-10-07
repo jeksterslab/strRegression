@@ -50,7 +50,7 @@ result_i <- unname(
     mu = colMeans(x_i)
   )
 )
-testthat::test_that("strRegression-theta moments", {
+testthat::test_that("test-strRegression-theta moments", {
   testthat::expect_true(
     all(
       abs(
@@ -72,7 +72,7 @@ result_i <- unname(
     mu = NULL
   )
 )
-testthat::test_that("strRegression-theta sigmacap", {
+testthat::test_that("test-strRegression-theta sigmacap", {
   testthat::expect_true(
     all(
       abs(

@@ -6,7 +6,11 @@
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
-#' @inheritParams beta_of_sigmacap
+#' @param x Numeric matrix.
+#'   Covariance matrix
+#'   \eqn{\boldsymbol{\Sigma}}
+#'   of
+#'   \eqn{\{y, x_1, \cdots, x_p \}^{\prime}}.
 #'
 #' @returns A numeric vector of length 1.
 #'
@@ -22,7 +26,9 @@ rsq_of_sigmacap <- function(x) {
   k <- dim(x)[1]
   return(
     1 - (
-      det(x) / det(x[2:k, 2:k, drop = FALSE])
+      det(x) / det(
+        x[2:k, 2:k, drop = FALSE]
+      )
     ) / x[1, 1]
   )
 }

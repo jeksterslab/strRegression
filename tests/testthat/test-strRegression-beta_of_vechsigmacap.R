@@ -44,7 +44,7 @@ result_i <- unname(
     vech_i
   )
 )
-testthat::test_that("strRegression-beta_of_vechsigmacap", {
+testthat::test_that("test-strRegression-beta_of_vechsigmacap", {
   testthat::expect_true(
     all(
       abs(
@@ -53,7 +53,7 @@ testthat::test_that("strRegression-beta_of_vechsigmacap", {
     )
   )
 })
-testthat::test_that("strRegression-beta_of_vechsigmacap error", {
+testthat::test_that("test-strRegression-beta_of_vechsigmacap error", {
   testthat::expect_error(
     beta_of_vechsigmacap(c(1, 1))
   )

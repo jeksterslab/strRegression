@@ -7,7 +7,11 @@
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
-#' @inheritParams beta_of_sigmacap
+#' @param x Numeric matrix.
+#'   Covariance matrix
+#'   \eqn{\boldsymbol{\Sigma}}
+#'   of
+#'   \eqn{\{y, x_1, \cdots, x_p \}^{\prime}}.
 #'
 #' @returns A numeric vector.
 #'
@@ -19,10 +23,19 @@ betastar_of_sigmacap <- function(x) {
     is.matrix(x)
   )
   k <- dim(x)[1]
+  p <- k - 1
   stopifnot(
     k == dim(x)[2],
     x == t(x)
   )
+  if (any(diag(x) <= 0)) {
+    return(
+      rep(
+        x = NA,
+        times = p
+      )
+    )
+  }
   d <- diag(k - 1)
   diag(d) <- sqrt(
     diag(x)[-1] / x[1:1]

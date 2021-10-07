@@ -36,6 +36,7 @@ vechnames(colnames(x))
 }
 \seealso{
 Other Linear Algebra Functions: 
+\code{\link{dcap}()},
 \code{\link{sym_of_vechs}()},
 \code{\link{sym_of_vech}()},
 \code{\link{vechsnames}()},
