@@ -54,6 +54,7 @@ Other Structure of Regression Functions:
 \code{\link{theta_wrt_vechsigmacap}()},
 \code{\link{thetastar_helper}()},
 \code{\link{thetastar_of_sigmacap}()},
+\code{\link{thetastar_of_vechsigmacap}()},
 \code{\link{theta}()}
 }
 \author{

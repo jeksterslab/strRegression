@@ -40,16 +40,20 @@ betastar_of_theta <- function(x,
   } else {
     sigmay <- sqrt(sigmaysq)
   }
-  if (is.na(sigmax) | is.na(sigmay)) {
+  if (
+    any(
+      is.na(sigmax),
+      is.na(sigmay)
+    )
+  ) {
     return(
       rep(
         x = NA,
         times = p
       )
     )
-  } else {
-    return(
-      beta * (sigmax / sigmay)
-    )
   }
+  return(
+    beta * (sigmax / sigmay)
+  )
 }
