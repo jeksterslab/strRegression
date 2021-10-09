@@ -1,7 +1,7 @@
 strRegression
 ================
 Ivan Jacob Agaloos Pesigan
-2021-10-08
+2021-10-09
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- badges: start -->

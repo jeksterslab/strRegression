@@ -7,7 +7,7 @@
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
-#' @inheritParams theta_helper
+#' @inheritParams thetastar_helper
 #'
 #' @returns A numeric matrix.
 #'

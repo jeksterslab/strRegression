@@ -143,27 +143,17 @@ the Vector of Standardized Regression Parameters</p>
     <tr>
       <th>x</th>
       <td><p>Numeric vector.
-Vector of parameters
-\(\boldsymbol{theta}
+Vector of standardized parameters
+\(\boldsymbol{theta}^{\ast}
   =
   \{
-    \boldsymbol{\beta},
-    \sigma^2,
-    \mathrm{\vech}
-    \left( \boldsymbol{\Sigma}_{\mathbf{X}, \mathbf{X}} \right)
+    \boldsymbol{\beta}^{\ast},
+    \sigma_{y},
+    \boldsymbol{\sigma}_{\mathbf{X}},
+    \mathrm{\vechs}
+    \left( \mathbf{P}_{\mathbf{X}, \mathbf{X}} \right)
   \}^{\prime}
-  \) when <code>mean_structure = FALSE</code> or
-\(\boldsymbol{theta}
-  =
-  \{
-    \boldsymbol{\beta},
-    \sigma^2,
-    \mathrm{\vech}
-    \left( \boldsymbol{\Sigma}_{\mathbf{X}, \mathbf{X}} \right),
-    \alpha,
-    \boldsymbol{\mu}_{\mathbf{X}}
-  \}^{\prime}
-  \) when <code>mean_structure = TRUE</code></p></td>
+  \)</p></td>
     </tr>
     </table>
 

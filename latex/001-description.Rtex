@@ -26,4 +26,9 @@ A collection of functions
 related to the mean and covariance structures
 of the linear regression model.
 
+<<>>=
+
+
+@
+
 \end{document}

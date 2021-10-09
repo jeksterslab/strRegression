@@ -46,6 +46,12 @@ betastar_of_theta <- function(x,
       is.na(sigmay)
     )
   ) {
+    message(
+      paste0(
+        "Negative variances.\n",
+        "Returning a vector of NAs.\n"
+      )
+    )
     return(
       rep(
         x = NA,

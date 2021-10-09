@@ -65,6 +65,23 @@ testthat::test_that("test-strRegression-betastar_of_vechsigmacap NA", {
     )
   )
 })
+testthat::test_that("test-strRegression-betastar_of_vechsigmacap singular", {
+  testthat::expect_true(
+    all(
+      is.na(
+        betastar_of_vechsigmacap(
+          vech(
+            matrix(
+              data = 1,
+              nrow = 3,
+              ncol = 3
+            )
+          )
+        )
+      )
+    )
+  )
+})
 # clean environment
 rm(
   tol_i,

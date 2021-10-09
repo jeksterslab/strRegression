@@ -32,12 +32,30 @@ beta_of_vechsigmacap <- function(x) {
   }
   sigmacap[lower.tri(sigmacap, diag = TRUE)] <- x
   sigmacap[upper.tri(sigmacap)] <- t(sigmacap)[upper.tri(sigmacap)]
-  return(
-    drop(
-      solve(
-        sigmacap[2:k, 2:k, drop = FALSE],
-        sigmacap[2:k, 1, drop = FALSE]
+  tryCatch(
+    {
+      return(
+        drop(
+          solve(
+            sigmacap[2:k, 2:k, drop = FALSE],
+            sigmacap[2:k, 1, drop = FALSE]
+          )
+        )
       )
-    )
+    },
+    error = function(x) {
+      message(
+        paste0(
+          "Error in inverting the matrix.\n",
+          "Returning a vector of NAs.\n"
+        )
+      )
+      return(
+        rep(
+          x = NA,
+          times = k - 1
+        )
+      )
+    }
   )
 }

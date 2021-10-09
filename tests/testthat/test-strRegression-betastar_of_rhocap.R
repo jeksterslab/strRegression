@@ -42,12 +42,27 @@ result_i <- unname(
     cor(x_i)
   )
 )
-testthat::test_that("test-strRegression-betastar_of_sigmacap", {
+testthat::test_that("test-strRegression-betastar_of_rhocap", {
   testthat::expect_true(
     all(
       abs(
         answer_i - result_i
       ) <= tol_i
+    )
+  )
+})
+testthat::test_that("test-strRegression-betastar_of_rhocap singular", {
+  testthat::expect_true(
+    all(
+      is.na(
+        betastar_of_rhocap(
+          matrix(
+            data = 1,
+            nrow = 3,
+            ncol = 3
+          )
+        )
+      )
     )
   )
 })

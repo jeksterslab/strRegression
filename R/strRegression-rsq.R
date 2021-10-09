@@ -6,6 +6,16 @@
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
+#' @param beta Numeric vector.
+#'   Partial regression slopes
+#'   \eqn{
+#'     \boldsymbol{\beta}
+#'     =
+#'     \{ \beta_1, \cdots, \beta_p \}^{\prime}
+#'   }.
+#' @param sigmasq Numeric.
+#'   Error variance
+#'   \eqn{\sigma^2}.
 #' @param sigmayx Numeric vector.
 #'   Covariances between the regressand and regressor variables
 #'   \eqn{
@@ -15,8 +25,11 @@
 #'   }
 #'   where
 #'   \eqn{j = \{ 1, \cdots, p \}}.
-#' @inheritParams sigmasq
-#' @inheritParams sigmaysq
+#' @param sigmacapx Numeric matrix.
+#'   Covariance matrix of the regressor variables
+#'   \eqn{
+#'     \boldsymbol{\Sigma}_{\mathrm{X}, \mathrm{X}}
+#'   }.
 #'
 #' @returns A numeric vector of length 1.
 #'

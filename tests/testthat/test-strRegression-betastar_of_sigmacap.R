@@ -62,6 +62,21 @@ testthat::test_that("test-strRegression-betastar_of_sigmacap NA", {
     )
   )
 })
+testthat::test_that("test-strRegression-betastar_of_sigmacap singular", {
+  testthat::expect_true(
+    all(
+      is.na(
+        betastar_of_sigmacap(
+          matrix(
+            data = 1,
+            nrow = 3,
+            ncol = 3
+          )
+        )
+      )
+    )
+  )
+})
 # clean environment
 rm(
   tol_i,

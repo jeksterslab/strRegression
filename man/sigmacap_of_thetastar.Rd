@@ -9,27 +9,17 @@ sigmacap_of_thetastar(x)
 }
 \arguments{
 \item{x}{Numeric vector.
-Vector of parameters
-\eqn{\boldsymbol{theta}
+Vector of standardized parameters
+\eqn{\boldsymbol{theta}^{\ast}
   =
   \{
-    \boldsymbol{\beta},
-    \sigma^2,
-    \mathrm{\vech}
-    \left( \boldsymbol{\Sigma}_{\mathbf{X}, \mathbf{X}} \right)
+    \boldsymbol{\beta}^{\ast},
+    \sigma_{y},
+    \boldsymbol{\sigma}_{\mathbf{X}},
+    \mathrm{\vechs}
+    \left( \mathbf{P}_{\mathbf{X}, \mathbf{X}} \right)
   \}^{\prime}
-  } when \code{mean_structure = FALSE} or
-\eqn{\boldsymbol{theta}
-  =
-  \{
-    \boldsymbol{\beta},
-    \sigma^2,
-    \mathrm{\vech}
-    \left( \boldsymbol{\Sigma}_{\mathbf{X}, \mathbf{X}} \right),
-    \alpha,
-    \boldsymbol{\mu}_{\mathbf{X}}
-  \}^{\prime}
-  } when \code{mean_structure = TRUE}}
+  }}
 }
 \value{
 A numeric matrix.

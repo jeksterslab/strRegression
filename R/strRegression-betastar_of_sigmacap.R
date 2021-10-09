@@ -40,12 +40,30 @@ betastar_of_sigmacap <- function(x) {
   diag(d) <- sqrt(
     diag(x)[-1] / x[1:1]
   )
-  return(
-    drop(
-      d %*% solve(
-        x[2:k, 2:k, drop = FALSE],
-        x[2:k, 1, drop = FALSE]
+  tryCatch(
+    {
+      return(
+        drop(
+          d %*% solve(
+            x[2:k, 2:k, drop = FALSE],
+            x[2:k, 1, drop = FALSE]
+          )
+        )
       )
-    )
+    },
+    error = function(x) {
+      message(
+        paste0(
+          "Error in inverting the matrix.\n",
+          "Returning a vector of NAs.\n"
+        )
+      )
+      return(
+        rep(
+          x = NA,
+          times = k - 1
+        )
+      )
+    }
   )
 }

@@ -27,12 +27,30 @@ beta_of_sigmacap <- function(x) {
     k == dim(x)[2],
     x == t(x)
   )
-  return(
-    drop(
-      solve(
-        x[2:k, 2:k, drop = FALSE],
-        x[2:k, 1, drop = FALSE]
+  tryCatch(
+    {
+      return(
+        drop(
+          solve(
+            x[2:k, 2:k, drop = FALSE],
+            x[2:k, 1, drop = FALSE]
+          )
+        )
       )
-    )
+    },
+    error = function(x) {
+      message(
+        paste0(
+          "Error in inverting the matrix.\n",
+          "Returning a vector of NAs.\n"
+        )
+      )
+      return(
+        rep(
+          x = NA,
+          times = k - 1
+        )
+      )
+    }
   )
 }

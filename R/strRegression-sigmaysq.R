@@ -9,7 +9,18 @@
 #' @param sigmasq Numeric.
 #'   Error variance
 #'   \eqn{\sigma^2}.
-#' @inheritParams sigmasq
+#' @param beta Numeric vector.
+#'   Partial regression slopes
+#'   \eqn{
+#'     \boldsymbol{\beta}
+#'     =
+#'     \{ \beta_1, \cdots, \beta_p \}^{\prime}
+#'   }.
+#' @param sigmacapx Numeric matrix.
+#'   Covariance matrix of the regressor variables
+#'   \eqn{
+#'     \boldsymbol{\Sigma}_{\mathrm{X}, \mathrm{X}}
+#'   }.
 #'
 #' @returns A numeric vector of length 1.
 #'
