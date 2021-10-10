@@ -18,6 +18,8 @@
 #'   }
 #'   where
 #'   \eqn{j = \{ 1, \cdots, p \}}.
+#' @param verbose Logical.
+#'   If `verbose = TRUE`, print message if error occurs.
 #'
 #' @returns A numeric vector.
 #'
@@ -25,18 +27,39 @@
 #' @family Structure of Regression Functions
 #' @keywords strRegression
 beta <- function(sigmacapx,
-                 sigmayx) {
+                 sigmayx,
+                 verbose = TRUE) {
   stopifnot(
     is.matrix(sigmacapx),
     sigmacapx == t(sigmacapx),
     is.vector(sigmayx)
   )
-  return(
-    drop(
-      solve(
-        sigmacapx,
-        sigmayx
+  tryCatch(
+    {
+      return(
+        drop(
+          solve(
+            sigmacapx,
+            sigmayx
+          )
+        )
       )
-    )
+    },
+    error = function(x) {
+      if (verbose) {
+        message(
+          paste0(
+            "Error in inverting the matrix.\n",
+            "Returning a vector of NAs.\n"
+          )
+        )
+      }
+      return(
+        rep(
+          x = NA,
+          times = length(sigmayx)
+        )
+      )
+    }
   )
 }

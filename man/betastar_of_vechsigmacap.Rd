@@ -6,7 +6,7 @@
 as a Function of the Half-Vectorization
 of the Covariance Matrix}
 \usage{
-betastar_of_vechsigmacap(x)
+betastar_of_vechsigmacap(x, verbose = TRUE)
 }
 \arguments{
 \item{x}{Numeric vector.
@@ -14,6 +14,9 @@ Half-vectorization of the covariance matrix
 \eqn{\boldsymbol{\Sigma}}
 of
 \eqn{\left\{y, x_1, \dots, x_p \right\}^{\prime}}.}
+
+\item{verbose}{Logical.
+If \code{verbose = TRUE}, print message if error occurs.}
 }
 \value{
 A numeric vector.

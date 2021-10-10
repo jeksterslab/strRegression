@@ -13,13 +13,16 @@
 #'   \eqn{\boldsymbol{\Sigma}}
 #'   of
 #'   \eqn{\left\{y, x_1, \dots, x_p \right\}^{\prime}}.
+#' @param verbose Logical.
+#'   If `verbose = TRUE`, print message if error occurs.
 #'
 #' @returns A numeric vector.
 #'
 #' @export
 #' @family Structure of Regression Functions
 #' @keywords strRegression
-beta_of_vechsigmacap <- function(x) {
+beta_of_vechsigmacap <- function(x,
+                                 verbose = TRUE) {
   stopifnot(is.vector(x))
   k <- 0.5 * (sqrt(1 + 8 * length(x)) - 1)
   sigmacap <- matrix(
@@ -44,12 +47,14 @@ beta_of_vechsigmacap <- function(x) {
       )
     },
     error = function(x) {
-      message(
-        paste0(
-          "Error in inverting the matrix.\n",
-          "Returning a vector of NAs.\n"
+      if (verbose) {
+        message(
+          paste0(
+            "Error in inverting the matrix.\n",
+            "Returning a vector of NAs.\n"
+          )
         )
-      )
+      }
       return(
         rep(
           x = NA,

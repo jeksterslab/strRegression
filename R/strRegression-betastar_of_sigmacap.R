@@ -12,13 +12,16 @@
 #'   \eqn{\boldsymbol{\Sigma}}
 #'   of
 #'   \eqn{\{y, x_1, \cdots, x_p \}^{\prime}}.
+#' @param verbose Logical.
+#'   If `verbose = TRUE`, print message if error occurs.
 #'
 #' @returns A numeric vector.
 #'
 #' @export
 #' @family Structure of Regression Functions
 #' @keywords strRegression
-betastar_of_sigmacap <- function(x) {
+betastar_of_sigmacap <- function(x,
+                                 verbose = TRUE) {
   stopifnot(
     is.matrix(x)
   )
@@ -52,12 +55,14 @@ betastar_of_sigmacap <- function(x) {
       )
     },
     error = function(x) {
-      message(
-        paste0(
-          "Error in inverting the matrix.\n",
-          "Returning a vector of NAs.\n"
+      if (verbose) {
+        message(
+          paste0(
+            "Error in inverting the matrix.\n",
+            "Returning a vector of NAs.\n"
+          )
         )
-      )
+      }
       return(
         rep(
           x = NA,

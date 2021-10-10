@@ -126,5 +126,6 @@ rm(
   x_i,
   obj_i,
   answer_i,
-  result_i
+  result_i,
+  beta_i
 )

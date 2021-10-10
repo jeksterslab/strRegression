@@ -5,7 +5,7 @@
 \title{Regression Coefficients
 as a Function of the Covariance Matrix}
 \usage{
-beta_of_sigmacap(x)
+beta_of_sigmacap(x, verbose = TRUE)
 }
 \arguments{
 \item{x}{Numeric matrix.
@@ -13,6 +13,9 @@ Covariance matrix
 \eqn{\boldsymbol{\Sigma}}
 of
 \eqn{\{y, x_1, \cdots, x_p \}^{\prime}}.}
+
+\item{verbose}{Logical.
+If \code{verbose = TRUE}, print message if error occurs.}
 }
 \value{
 A numeric vector.

@@ -52,6 +52,22 @@ testthat::test_that("test-strRegression-beta", {
     )
   )
 })
+testthat::test_that("test-strRegression-beta singular", {
+  testthat::expect_true(
+    all(
+      is.na(
+        beta(
+          sigmacapx = matrix(
+            data = 1,
+            nrow = 2,
+            ncol = 2
+          ),
+          sigmayx = c(1, 1)
+        )
+      )
+    )
+  )
+})
 # clean environment
 rm(
   tol_i,

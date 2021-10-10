@@ -5,7 +5,7 @@
 \title{Regression Coefficients
 as a Function of the Covariance Matrix}
 \usage{
-beta(sigmacapx, sigmayx)
+beta(sigmacapx, sigmayx, verbose = TRUE)
 }
 \arguments{
 \item{sigmacapx}{Numeric matrix.
@@ -20,6 +20,9 @@ Covariances between the regressand and regressor variables
   }
 where
 \eqn{j = \{ 1, \cdots, p \}}.}
+
+\item{verbose}{Logical.
+If \code{verbose = TRUE}, print message if error occurs.}
 }
 \value{
 A numeric vector.

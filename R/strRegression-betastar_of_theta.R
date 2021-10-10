@@ -7,6 +7,8 @@
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
+#' @param verbose Logical.
+#'   If `verbose = TRUE`, print message if error occurs.
 #' @inheritParams theta_helper
 #'
 #' @returns A numeric vector.
@@ -15,7 +17,8 @@
 #' @family Structure of Regression Functions
 #' @keywords strRegression
 betastar_of_theta <- function(x,
-                              mean_structure = FALSE) {
+                              mean_structure = FALSE,
+                              verbose = TRUE) {
   theta <- theta_helper(
     x = x,
     mean_structure = mean_structure
@@ -46,12 +49,14 @@ betastar_of_theta <- function(x,
       is.na(sigmay)
     )
   ) {
-    message(
-      paste0(
-        "Negative variances.\n",
-        "Returning a vector of NAs.\n"
+    if (verbose) {
+      message(
+        paste0(
+          "Error in inverting the matrix.\n",
+          "Returning a vector of NAs.\n"
+        )
       )
-    )
+    }
     return(
       rep(
         x = NA,

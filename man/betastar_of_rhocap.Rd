@@ -5,7 +5,7 @@
 \title{Standardized Regression Coefficients
 as a Function of the Correlation Matrix}
 \usage{
-betastar_of_rhocap(x)
+betastar_of_rhocap(x, verbose = TRUE)
 }
 \arguments{
 \item{x}{Numeric matrix.
@@ -13,6 +13,9 @@ Correlation matrix
 \eqn{\mathbf{P}}
 of
 \eqn{\left\{y, x_1, \dots, x_p \right\}^{\prime}}.}
+
+\item{verbose}{Logical.
+If \code{verbose = TRUE}, print message if error occurs.}
 }
 \value{
 A numeric vector.

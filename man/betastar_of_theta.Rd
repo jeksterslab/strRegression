@@ -5,7 +5,7 @@
 \title{Standardized Regression Coefficients
 as a Function of the Vector of Regression Parameters}
 \usage{
-betastar_of_theta(x, mean_structure = FALSE)
+betastar_of_theta(x, mean_structure = FALSE, verbose = TRUE)
 }
 \arguments{
 \item{x}{Numeric vector.
@@ -36,6 +36,9 @@ If \code{mean_structure = TRUE},
 \code{x} includes mean structure parameters.
 If \code{mean_structure = FALSE},
 \code{x} only includes covariance structure parameters.}
+
+\item{verbose}{Logical.
+If \code{verbose = TRUE}, print message if error occurs.}
 }
 \value{
 A numeric vector.

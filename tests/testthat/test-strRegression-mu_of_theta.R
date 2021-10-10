@@ -118,6 +118,7 @@ rm(
   beta_i,
   e_i,
   x_i,
+  y_i,
   obj_i,
   answer_i,
   result_i
